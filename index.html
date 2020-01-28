@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<script>
+	function getResult(FirstNumber,SecondNumber,MathSign){
+		let result;
+		if (MathSign === '+') {
+			result = FirstNumber + SecondNumber;
+		}else if(MathSign === '-'){
+			result = FirstNumber - SecondNumber;
+		}else if(MathSign === '*'){
+			result = FirstNumber * SecondNumber;
+		}else if(MathSign === '/'){
+			result = FirstNumber / SecondNumber;
+		}
+		return result;
+	}
+	result = getResult(20,2,'/');
+	console.log(result)
+</script>
+</body>
+</html>
