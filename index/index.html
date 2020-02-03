@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<script>
+	function getResult(FirstNumber,SecondNumber,MathSign){
+		let result;
+		if (MathSign === '+') {
+			result = FirstNumber + SecondNumber;
+		}else if(MathSign === '-'){
+			result = FirstNumber - SecondNumber;
+		}else if(MathSign === '*'){
+			result = FirstNumber * SecondNumber;
+		}else if(MathSign === '/'){
+			result = FirstNumber / SecondNumber;
+		}
+		return result;
+	}
+	result = getResult(20,2,'/');
+	console.log(result)
+
+
+	
+//функция, которая принимает строку, а вторым аргументом - массив символов, которые нужно исключить из строки.//
+
+function str(string,symbol){
+		var result = '';
+		for(var elem of string){
+			var i = 0;
+			i--;
+			if(elem == symbol){
+				result = string.slice(0,i);
+			}
+		}
+		return result;
+	}
+	console.log(str('Sasha','a'));
+</script>
+</body>
+</html>
