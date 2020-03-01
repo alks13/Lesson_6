@@ -24,18 +24,14 @@
 
 	
 //функция, которая принимает строку, а вторым аргументом - массив символов, которые нужно исключить из строки.//
-	function str(string,symbol){
-		var result = '';
-		for(var elem of string){
-			var i = 0;
-			i--;
-			if(elem == symbol){
-				result = string.slice(0,i);
-			}
-		}
-		return result;
-	}
-	console.log(str('Sasha','a'));
+		function remove_chars(original, to_remove) {
+    to_remove.forEach(sym => {
+        while (original.includes(sym))
+            original = original.replace(sym, '');
+    });
+    return original;
+}
+console.log(remove_chars('Hello',['o']));
 </script>
 </body>
 </html>
